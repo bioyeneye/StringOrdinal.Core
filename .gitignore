@@ -436,3 +436,6 @@ src/.idea/*
 src/.vs/*
 src/StringOrdinal.Core/bin/*
 src/StringOrdinal.Core/obj/*
+
+src/StringOrdinal.SampleConsole/bin/*
+src/StringOrdinal.SampleConsole/obj/*
