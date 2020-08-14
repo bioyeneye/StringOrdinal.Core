@@ -45,7 +45,7 @@ namespace StringOrdinal.Core
             return superScript;
         }
         
-        public static string ConstructNumberToOrdinal(this int num)
+        public static string AddOrdinalToNumber(this int num)
         {
             if( num <= 0 ) return num.ToString();
 

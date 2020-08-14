@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>StringOrdinal.Core</Title>
+        <Description>Create ordinal string</Description>
     </PropertyGroup>
 
 </Project>
