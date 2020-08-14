@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using StringOrdinal.Core;
 
 namespace StringOrdinal.SampleConsole
 {
@@ -6,7 +9,9 @@ namespace StringOrdinal.SampleConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Console.WriteLine(1.ConstructNumberToOrdinal());
+            Console.WriteLine("34".ConvertToSuperScript());
         }
     }
 }
