@@ -5,6 +5,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>StringOrdinal.Core</Title>
         <Description>Create ordinal string</Description>
+        <PackageVersion>1.0.2</PackageVersion>
     </PropertyGroup>
 
 </Project>
