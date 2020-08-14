@@ -16,8 +16,10 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
+      working-directory: ./src
       run: dotnet restore
     - name: Build
+      working-directory: ./src
       run: dotnet build --configuration Release --no-restore
     - name: Publish StringOrdinal.Core
       uses: brandedoutcast/publish-nuget@v2.5.2
