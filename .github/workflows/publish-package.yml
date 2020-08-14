@@ -1,0 +1,37 @@
+name: Publish Package
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src 
+        
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.301
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+#     - name: Publish StringOrdinal.Core
+#       uses: rohith/publish-nuget@v2
+#       with:
+#           PROJECT_FILE_PATH: src/StringOrdinal.Core/StringOrdinal.Core.csproj
+#           PACKAGE_NAME: StringOrdinal.Core
+#           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+#           NUGET_SOURCE: https://api.nuget.org
+          
+    - name: Publish nuget package
+      run: find . -name *.nupkg -type f -print0 | xargs -0 -I pkg dotnet nuget push pkg -k $nuget_api_key -s "https://api.nuget.org/v3/index.json" --skip-duplicate
+      env:
+        nuget_api_key: ${{ secrets.NUGET_API_KEY }}
+

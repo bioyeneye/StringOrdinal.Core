@@ -24,7 +24,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(1.ConstructNumberToOrdinal());
+        Console.WriteLine(1.AddOrdinalToNumber());
         Console.WriteLine("34".ConvertToSuperScript());
     }
 }
